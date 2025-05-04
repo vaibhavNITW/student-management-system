@@ -30,6 +30,9 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student createStudent(Student student) {
+        if(studentRepository.existsByEmail(student.getEmail())) {
+            throw new RuntimeException("Student email already exists, " + student.getEmail());
+        }
         return studentRepository.save(student);
     }
 
