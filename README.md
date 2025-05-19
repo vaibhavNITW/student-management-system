@@ -113,6 +113,16 @@ mvn spring-boot:run
 
 ---
 
+### 🔗 Example Endpoints
+
+| Operation | URL                        | Method    | View/Page           |
+|-----------|----------------------------|-----------|----------------------|
+| View All  | `/students`                | GET       | `list-students.jsp`  |
+| Add New   | `/students/add`            | GET/POST  | `add-student.jsp`    |
+| Edit      | `/students/update/{id}`    | GET/POST  | `update-student.jsp` |
+| Delete    | `/students/delete/{id}`    | GET       | (Redirects to list)  |
+
+
 ## 🧪 Screenshot Ideas
 
 - Homepage displaying student list  
